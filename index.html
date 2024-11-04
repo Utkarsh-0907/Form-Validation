@@ -7,12 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form id="form" name="myForm" onsubmit="return validationForm()">
-        Username: <input type="text" name="username" maxlength="20">
-        Email: <input type="text" name="email" maxlength="30">
-        Password: <input type="password" name="password" maxlength="20">
-        Confirm Password: <input type="password" name="confirmPassword" maxlength="20">
-        <input type="submit" value="Submit">
+    <form id="form" name="myForm" onsubmit="return handleSubmit(event)">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" maxlength="20">
+            <div class="error-message" id="username-error"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" maxlength="30">
+            <div class="error-message" id="email-error"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" maxlength="20">
+            <div class="error-message" id="password-error"></div>
+        </div>
+        
+        <div class="form-group">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" maxlength="20">
+            <div class="error-message" id="confirmPassword-error"></div>
+        </div>
+        
+        <button type="submit" class="submit-btn">Submit</button>
     </form>
     
     <script src="script.js"></script>
