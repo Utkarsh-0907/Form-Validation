@@ -39,7 +39,7 @@ function validationForm() {
     };
     localStorage.setItem("formData", JSON.stringify(formData));
   }
-
+  form.reset();
   return isValid;
 }
 
